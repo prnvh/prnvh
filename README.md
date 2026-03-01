@@ -8,7 +8,8 @@
 
 ## What I Build
 
-Most applied AI systems fail in deployment - not because the models are weak, but because the architecture around them treats generation as the endpoint rather than a component that needs to be constrained and verified. Both of my projects are implementations of the same response to this problem from different directions.
+AI systems break in deployment for a specific reason: generation is treated as the end point rather than a component inside a larger architecture that should constrain and verify it. I'm focused on the layer between the model and the real world — deterministic pipelines, explicit validation gates, and systems that fail predictably rather than hallucinate silently.
+Both of my projects are different implementations of the same idea applied in different domains.
 
 ---
 
@@ -25,8 +26,6 @@ A session-based orchestration layer for LLM-driven customer service. Instead of 
 - **Intent Logic Fork** - Transactional queries (order tracking, cancellations) bypass the LLM entirely and hit verified APIs directly. Eliminates transactional hallucination
 - P90 internal latency **< 5s** post-debounce · 500+ adversarial red-team tests completed
 
-`Python` `MongoDB` `n8n` 
-
 ---
 
 ### [LLM Code Graph Compiler](https://github.com/prnvh/llm-code-graph-compiler)
@@ -36,9 +35,6 @@ A CLI tool that converts natural language tasks into deterministic, runnable Pyt
 - **Typed Node Registry** - 23 nodes across data ingestion, transformation, storage, querying, and serving. Every edge is only legal if output type of node A matches input type of node B
 - **Structured Planner** - LLM returns a JSON graph spec (nodes, edges, params). Plan normalizer handles format inconsistencies before validation
 - **Deterministic Validator** - 5-check pipeline: node existence · type compatibility · DAG integrity via Kahn's algorithm · orphan detection · required parameter enforcement. Aborts with explicit errors before a single line emits
-- **Stress tested** - 9-node end-to-end pipeline validated: ingest → filter → clean → validate → store → query → aggregate → sort → export
-
-`Python` `Pydantic` `Click` 
 
 ---
 
