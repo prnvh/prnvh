@@ -16,7 +16,7 @@ A governed, event-driven shared memory architecture for LLM agents.
 - Writes are validated, logged to an append-only ledger, and projected into canonical state
 - Includes benchmark families for lifecycle updates, identity resolution, overrides, coherence, and replay robustness
 
-##PlanCompiler
+## PlanCompiler
 A deterministic compilation architecture for structured LLM workflows.
 Typed node registry and static validation
 LLM plans workflows; deterministic code generation handles execution
