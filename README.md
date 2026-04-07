@@ -6,7 +6,7 @@ I build AI systems focused on making LLMs usable in reliable real-world workflow
 LinkedIn pranavharikumar2008@gmail.com
 
 ## What I'm working on
-I’m interested in making LLM systems more reliable in deployment — not by prompting them harder, but by placing them inside architectures that constrain writes, validate actions, and fail in explicit ways.
+I’m interested in making LLM systems more reliable in deployment, not by prompting them harder, but by placing them inside architectures that constrain writes, validate actions, and fail in explicit ways.
 
 ## Projects
 
